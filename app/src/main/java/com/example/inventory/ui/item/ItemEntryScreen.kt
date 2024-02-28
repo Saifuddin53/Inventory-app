@@ -74,10 +74,6 @@ fun ItemEntryScreen(
             itemUiState = viewModel.itemUiState,
             onItemValueChange = viewModel::updateUiState,
             onSaveClick = {
-                coroutineScope.launch {
-                    viewModel.saveItem()
-                    navigateBack()
-                }
             },
             modifier = Modifier
                 .padding(innerPadding)
