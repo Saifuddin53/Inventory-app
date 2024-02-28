@@ -45,6 +45,7 @@ fun ItemEditScreen(
     modifier: Modifier = Modifier,
     viewModel: ItemEditViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
+
     Scaffold(
         topBar = {
             InventoryTopAppBar(
@@ -57,8 +58,6 @@ fun ItemEditScreen(
     ) { innerPadding ->
         ItemEntryBody(
             itemUiState = viewModel.itemUiState,
-            onItemValueChange = { },
-            onSaveClick = { },
             modifier = Modifier.padding(innerPadding)
         )
     }
